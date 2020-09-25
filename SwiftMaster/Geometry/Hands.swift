@@ -7,6 +7,14 @@
 
 import SwiftUI
 
+func createHand(_ reader: GeometryProxy, width: CGFloat, height: CGFloat? = nil, angle: Angle, color:Color) -> some View {
+  
+  let usedHeight = height ?? reader.size.height/2
+  //hands
+  
+  return Rectangle().fill().foregroundColor(color).frame(width: width, height: usedHeight, alignment: .bottom).rotationEffect(angle, anchor: .bottom).position(x: reader.size.width/2, y: reader.size.height/2).offset(y: -(usedHeight/2))
+}
+
 struct MinuteHandFill: View {
     var body: some View {
       ZStack{
