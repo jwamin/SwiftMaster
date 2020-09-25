@@ -13,14 +13,31 @@ struct Time {
   let minutes: Int
   let seconds: Int
   let dayOfMonth: Int
+  
+  var hourAngle: Angle {
+    
+    let twelveHours:Double = (hours > 12) ? Double(hours - 12) : Double(hours)
+    let angle:Double = Double(twelveHours / 12) * Double(360)
+
+    return Angle(degrees: angle)
+  }
+  
+  var sixtyAngle:(Int) -> Angle = { unit in
+    let dblUnit = Double(unit)
+    return Angle(degrees: 360 * Double(dblUnit / 60))
+    
+  }
+  
 }
 
-let testTime = Time(hours: 10, minutes: 9, seconds: 25, dayOfMonth: 25)
+
 
 struct SimpleClockFace: View {
   
-  let time: Time
-  let timeProvider = TimeProvider()
+  var time: Time {
+    timeProvider.publishedTime
+  }
+  @ObservedObject var timeProvider = TimeProvider()
   
   
   fileprivate func createHand(_ reader: GeometryProxy, width: CGFloat, height: CGFloat? = nil, angle: Angle, color:Color) -> some View {
@@ -37,11 +54,11 @@ struct SimpleClockFace: View {
       GeometryReader { reader in
         Circle().stroke().foregroundColor(Color.red)
         
-        createHand(reader, width: 25,height:100, angle:.degrees(45),color:.black)
+        createHand(reader, width: 25,height:100, angle:time.hourAngle,color:.black)
         
-        createHand(reader, width: 10, angle:.degrees(290),color:.black)
+        createHand(reader, width: 10, angle:time.sixtyAngle(time.minutes),color:.black)
         
-        createHand(reader, width: 2, angle:.degrees(180),color:.red)
+        createHand(reader, width: 2, angle:time.sixtyAngle(time.seconds),color:.red)
         
         //teeth
       }
@@ -54,14 +71,15 @@ struct SimpleClockFace: View {
 struct ContentView_Previews: PreviewProvider {
   
   static var previews: some View {
-    SimpleClockFace(time: testTime)
+    SimpleClockFace()
   }
 }
 
 
+
 class TimeProvider: ObservableObject {
   
-  @Published var publishedTime: Time = Time(hours: 0, minutes: 0, seconds: 0, dayOfMonth: 0)
+  @Published var publishedTime: Time = Time(hours: 10, minutes: 9, seconds: 25, dayOfMonth: 25)
   
   private var reciever: PassthroughSubject = PassthroughSubject<Date,Never>()
   private var set = Set<AnyCancellable>()
