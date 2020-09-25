@@ -11,7 +11,8 @@ import SwiftUI
 struct SwiftMasterApp: App {
     var body: some Scene {
         WindowGroup {
-            SimpleClockFace()
+            SwiftMasterClockFace()
         }
     }
 }
+
