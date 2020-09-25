@@ -41,6 +41,7 @@
 		578B2903251E944600496887 /* TimeProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeProvider.swift; sourceTree = "<group>"; };
 		578B2908251E94A400496887 /* SimpleClockFace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleClockFace.swift; sourceTree = "<group>"; };
 		578B2910251E94E300496887 /* Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
+		578B291E251E994300496887 /* watchface.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = watchface.png; sourceTree = "<group>"; };
 		578B8F76251E18DC0017A84C /* SwiftMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftMaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		578B8F79251E18DC0017A84C /* SwiftMasterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMasterApp.swift; sourceTree = "<group>"; };
 		578B8F7B251E18DC0017A84C /* SwiftMasterClockFace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMasterClockFace.swift; sourceTree = "<group>"; };
@@ -111,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				578B8FA7251E18F90017A84C /* README.md */,
+				578B291E251E994300496887 /* watchface.png */,
 				578B8F78251E18DC0017A84C /* SwiftMaster */,
 				578B8F8A251E18DD0017A84C /* SwiftMasterTests */,
 				578B8F95251E18DD0017A84C /* SwiftMasterUITests */,

@@ -1,4 +1,6 @@
+![Swiftmaster Screenshot](watchface.png?raw=true "Screenshot")
+
 #  Swiftmaster
 
-##  Clockfaces in Swift
+##  Classic Watchface in Swift
 

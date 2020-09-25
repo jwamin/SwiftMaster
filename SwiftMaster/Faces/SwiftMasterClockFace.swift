@@ -72,9 +72,7 @@ struct ContentView_Previews: PreviewProvider {
   
   static var previews: some View {
     Group {
-      SimpleClockFace()
-      SwiftMasterClockFace().previewDevice(PreviewDevice(rawValue: "iPhone 8"))
-        .previewDisplayName("iPhone 8")
+      SwiftMasterClockFace()
     }
     
   }
