@@ -45,6 +45,7 @@
 		578B8F92251E18DD0017A84C /* SwiftMasterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftMasterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		578B8F96251E18DD0017A84C /* SwiftMasterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMasterUITests.swift; sourceTree = "<group>"; };
 		578B8F98251E18DD0017A84C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		578B8FA7251E18F90017A84C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +76,7 @@
 		578B8F6D251E18DC0017A84C = {
 			isa = PBXGroup;
 			children = (
+				578B8FA7251E18F90017A84C /* README.md */,
 				578B8F78251E18DC0017A84C /* SwiftMaster */,
 				578B8F8A251E18DD0017A84C /* SwiftMasterTests */,
 				578B8F95251E18DD0017A84C /* SwiftMasterUITests */,
