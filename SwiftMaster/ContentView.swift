@@ -18,7 +18,14 @@ struct Time {
   var hourAngle: Angle {
     
     let twelveHours:Double = (hours > 12) ? Double(hours - 12) : Double(hours)
-    let angle:Double = Double(twelveHours / 12) * Double(360)
+
+    let minDoubleUnit = Double(minutes)
+    
+    let minsDecimal = Double(minDoubleUnit / 60)
+    
+    let renderingValue = twelveHours + minsDecimal
+    
+    let angle:Double = Double(renderingValue / 12) * Double(360)
 
     return Angle(degrees: angle)
   }
@@ -43,8 +50,6 @@ struct Time {
   
 }
 
-
-
 struct SimpleClockFace: View {
   
   var time: Time {
@@ -62,6 +67,27 @@ struct SimpleClockFace: View {
     return Rectangle().fill().foregroundColor(color).frame(width: width, height: usedHeight, alignment: .bottom).rotationEffect(angle, anchor: .bottom).position(x: reader.size.width/2, y: reader.size.height/2).offset(y: -(usedHeight/2))
   }
   
+  fileprivate func createMinuteHand(_ reader: GeometryProxy, width: CGFloat, height: CGFloat? = nil, angle: Angle) -> some View {
+    
+    
+    let usedHeight = height ?? reader.size.height/2
+    //hands
+    let offsetCenter:CGFloat = -(usedHeight/2)
+    
+    return MinuteHandFill().frame(width: width, height: usedHeight, alignment: .bottom).rotationEffect(angle, anchor: .bottom).position(x: reader.size.width/2, y: reader.size.height/2).offset(y: offsetCenter)
+  }
+  
+  fileprivate func createHourHand(_ reader: GeometryProxy, angle: Angle) -> some View {
+    
+    
+    let height = reader.size.height/3
+    let width = reader.size.height/6
+    //hands
+    let offsetCenter:CGFloat = -(height/2)
+    
+    return HourHandFill().frame(width: width, height: height, alignment: .bottom).rotationEffect(angle, anchor: .bottom).position(x: reader.size.width/2, y: reader.size.height/2).offset(y: offsetCenter)
+  }
+  
   fileprivate func renderDate(_ reader: GeometryProxy, color: Color) -> some View {
     
     let usedHeight = reader.size.height/2
@@ -75,13 +101,21 @@ struct SimpleClockFace: View {
       GeometryReader { reader in
         Circle().stroke().foregroundColor(Color.red)
         
-        createHand(reader, width: 25,height:100, angle:time.hourAngle,color:.black)
+        renderDate(reader, color: .red)
         
-        createHand(reader, width: 10, angle:time.sixtyAngle(time.minutes),color:.black)
+        createHourHand(reader, angle: time.hourAngle)
+        //createHand(reader, width: 25,height:100, angle:time.hourAngle,color:.primary)
+        
+//        createHand(reader, width: 10, angle:time.sixtyAngle(time.minutes),color:.primary)
+        //createMinuteHand(reader, width: reader.size.width/6.5, angle: time.sixtyAngle(time.minutes))
+        
+        createMinuteHand(reader, width: reader.size.width/6.5, angle: time.sixtyAngle(time.minutes))
+        
+        Circle().stroke().frame(width: 20, height: 20, alignment: .center).foregroundColor(.green).position(x: reader.size.width/2, y: reader.size.height/2)
         
         createHand(reader, width: 2, angle:time.secondHandAngle(),color:.red)
         
-        renderDate(reader, color: .red)
+        
         
         //teeth
       }
@@ -95,7 +129,12 @@ struct SimpleClockFace: View {
 struct ContentView_Previews: PreviewProvider {
   
   static var previews: some View {
-    SimpleClockFace()
+    Group {
+      SimpleClockFace()
+      SimpleClockFace().previewDevice(PreviewDevice(rawValue: "iPhone 8"))
+        .previewDisplayName("iPhone 8").environment(\.colorScheme, .dark)
+    }
+    
   }
 }
 
@@ -124,7 +163,7 @@ class TimeProvider: ObservableObject {
       let day = Calendar.current.component(.day, from: date)
       let time = Time(hours: hour, minutes: minute, seconds: seconds, ms: milli, dayOfMonth: day)
       
-      print(time)
+      //print(time)
       
       return time
       
