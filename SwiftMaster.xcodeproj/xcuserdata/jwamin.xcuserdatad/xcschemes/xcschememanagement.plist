@@ -9,16 +9,6 @@
 			<key>orderHint</key>
 			<integer>4</integer>
 		</dict>
-		<key>SwiftMaster-AW WatchKit App (Complication).xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
-		</dict>
-		<key>SwiftMaster-AW WatchKit App.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>0</integer>
-		</dict>
 		<key>SwiftMaster-AW.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
@@ -33,6 +23,29 @@
 		<dict>
 			<key>orderHint</key>
 			<integer>3</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>5758E37D251F656B007FB87C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>578B8F75251E18DC0017A84C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>578B8F86251E18DD0017A84C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>578B8F91251E18DD0017A84C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
