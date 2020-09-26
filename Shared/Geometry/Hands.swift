@@ -90,7 +90,7 @@ struct DiverHand: Shape {
     let widthQuarter = rect.size.width / 4
     let height34 = rect.size.height / 8
     
-    let center = CGPoint(x: rect.size.width / 2, y: rect.size.height / 2)
+    let _ = CGPoint(x: rect.size.width / 2, y: rect.size.height / 2)
     
     let distance:CGFloat = 7
     
