@@ -97,6 +97,7 @@
 		5758E392251F656D007FB87C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5758E395251F656D007FB87C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5758E397251F656D007FB87C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5758E3DA251F6A97007FB87C /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		578B28FB251E7B8500496887 /* Hands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hands.swift; sourceTree = "<group>"; };
 		578B2903251E944600496887 /* TimeProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeProvider.swift; sourceTree = "<group>"; };
 		578B2908251E94A400496887 /* SimpleClockFace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleClockFace.swift; sourceTree = "<group>"; };
@@ -218,6 +219,7 @@
 		578B8F6D251E18DC0017A84C = {
 			isa = PBXGroup;
 			children = (
+				5758E3DA251F6A97007FB87C /* .gitignore */,
 				578B8FA7251E18F90017A84C /* README.md */,
 				578B291E251E994300496887 /* watchface.png */,
 				578B8F78251E18DC0017A84C /* Shared */,
