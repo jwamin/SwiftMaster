@@ -24,6 +24,14 @@ struct Time {
 
     return Angle(degrees: (renderingValue / 12) * 360)
   }
+
+  var hourAngle24: Angle {
+
+    let minsDecimal = minutes / 60
+    let renderingValue = hours + minsDecimal
+
+    return Angle(degrees: (renderingValue / 24) * 360)
+  }
   
   //DRY
   func minuteHandAngle() -> Angle {

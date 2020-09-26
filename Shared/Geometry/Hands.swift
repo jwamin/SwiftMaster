@@ -58,22 +58,49 @@ struct HourHandFill: View {
 //}
 
 struct Triangle: Shape {
+  
+  let split: CGFloat?
+  
+  init(splitInset: CGFloat? = nil) {
+  
+    self.split = splitInset
+  }
+  
   func path(in rect: CGRect) -> Path {
     let widthQuarter = rect.size.width / 4
     var path = Path()
     
     let topMiddle = CGPoint(x: widthQuarter * 2, y: 0)
+    
     let bottomRight = CGPoint(x: rect.size.width, y: rect.size.height)
     let bottomLeft = CGPoint(x: 0, y: rect.size.height)
     
     path.move(to: topMiddle)
     path.addLine(to: bottomRight)
+    if let inset = split {
+      precondition(inset >= 0 && inset <= 1)
+      let insetCoordinate = CGPoint(x: rect.size.width / 2, y: rect.size.height * inset)
+      path.addLine(to: insetCoordinate)
+    }
     path.addLine(to: bottomLeft)
     path.closeSubpath()
     
     return path
     
     
+  }
+}
+
+struct GMTHand: View {
+  var body: some View{
+    ZStack{
+      GeometryReader { reader in
+        Rectangle().fill().foregroundColor(.gray).frame(width: reader.size.width / 8, height: reader.size.height * 0.9, alignment: .center).position(x: reader.size.width/2, y:reader.size.height / 2).offset(y: reader.size.height * 0.05)
+    Triangle(splitInset: 0.7).fill().foregroundColor(.orange)
+      .frame(width: reader.size.width, height: reader.size.height / 4, alignment: .center).overlay(Triangle(splitInset: 0.7).fill().foregroundColor(.white).scaleEffect(0.6))
+                                                                    
+      }
+    }
   }
 }
 
@@ -166,6 +193,7 @@ struct Hands_Previews: PreviewProvider {
         MinuteHandFill().previewLayout(.sizeThatFits)
         SecondsHand().previewLayout(.sizeThatFits)
         HourHandFill().previewLayout(.sizeThatFits)
+        GMTHand().previewLayout(.sizeThatFits)
       }
     }
 }
