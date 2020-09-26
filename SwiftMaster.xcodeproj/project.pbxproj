@@ -7,21 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5758E381251F656C007FB87C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5758E380251F656C007FB87C /* Assets.xcassets */; };
+		5758E388251F656C007FB87C /* SwiftMaster-AW Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5758E387251F656C007FB87C /* SwiftMaster-AW Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5758E38F251F656D007FB87C /* SwiftMasterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5758E38E251F656D007FB87C /* SwiftMasterApp.swift */; };
+		5758E391251F656D007FB87C /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5758E390251F656D007FB87C /* ComplicationController.swift */; };
+		5758E393251F656D007FB87C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5758E392251F656D007FB87C /* Assets.xcassets */; };
+		5758E396251F656D007FB87C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5758E395251F656D007FB87C /* Preview Assets.xcassets */; };
+		5758E39A251F656D007FB87C /* SwiftMaster-AW.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 5758E37E251F656B007FB87C /* SwiftMaster-AW.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5758E3AC251F6591007FB87C /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578B2910251E94E300496887 /* Time.swift */; };
+		5758E3AD251F6594007FB87C /* TimeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578B2903251E944600496887 /* TimeProvider.swift */; };
+		5758E3AE251F6597007FB87C /* SimpleClockFace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578B2908251E94A400496887 /* SimpleClockFace.swift */; };
+		5758E3AF251F659A007FB87C /* SwiftMasterClockFace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578B8F7B251E18DC0017A84C /* SwiftMasterClockFace.swift */; };
+		5758E3B0251F659C007FB87C /* Hands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578B28FB251E7B8500496887 /* Hands.swift */; };
 		578B28FC251E7B8500496887 /* Hands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578B28FB251E7B8500496887 /* Hands.swift */; };
 		578B2904251E944600496887 /* TimeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578B2903251E944600496887 /* TimeProvider.swift */; };
 		578B2909251E94A400496887 /* SimpleClockFace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578B2908251E94A400496887 /* SimpleClockFace.swift */; };
 		578B2911251E94E300496887 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578B2910251E94E300496887 /* Time.swift */; };
-		578B2925251F548800496887 /* SwiftMaster-AW WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 578B2924251F548800496887 /* SwiftMaster-AW WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		578B292A251F548B00496887 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 578B2929251F548B00496887 /* Assets.xcassets */; };
-		578B2931251F548B00496887 /* SwiftMaster-AW WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 578B2930251F548B00496887 /* SwiftMaster-AW WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		578B2938251F548B00496887 /* SwiftMasterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578B2937251F548B00496887 /* SwiftMasterApp.swift */; };
-		578B293A251F548B00496887 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578B2939251F548B00496887 /* ComplicationController.swift */; };
-		578B293C251F548C00496887 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 578B293B251F548C00496887 /* Assets.xcassets */; };
-		578B293F251F548C00496887 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 578B293E251F548C00496887 /* Preview Assets.xcassets */; };
-		578B2958251F54BF00496887 /* SwiftMasterClockFace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578B8F7B251E18DC0017A84C /* SwiftMasterClockFace.swift */; };
-		578B295F251F54EE00496887 /* Hands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578B28FB251E7B8500496887 /* Hands.swift */; };
-		578B2966251F54F700496887 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578B2910251E94E300496887 /* Time.swift */; };
-		578B296D251F54FA00496887 /* TimeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578B2903251E944600496887 /* TimeProvider.swift */; };
 		578B8F7A251E18DC0017A84C /* SwiftMasterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578B8F79251E18DC0017A84C /* SwiftMasterApp.swift */; };
 		578B8F7C251E18DC0017A84C /* SwiftMasterClockFace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578B8F7B251E18DC0017A84C /* SwiftMasterClockFace.swift */; };
 		578B8F7E251E18DD0017A84C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 578B8F7D251E18DD0017A84C /* Assets.xcassets */; };
@@ -31,19 +32,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		578B2926251F548800496887 /* PBXContainerItemProxy */ = {
+		5758E389251F656C007FB87C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 578B8F6E251E18DC0017A84C /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 578B2923251F548800496887;
-			remoteInfo = "SwiftMaster-AW WatchKit App";
+			remoteGlobalIDString = 5758E386251F656C007FB87C;
+			remoteInfo = "SwiftMaster-AW Extension";
 		};
-		578B2932251F548B00496887 /* PBXContainerItemProxy */ = {
+		5758E398251F656D007FB87C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 578B8F6E251E18DC0017A84C /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 578B292F251F548B00496887;
-			remoteInfo = "SwiftMaster-AW WatchKit Extension";
+			remoteGlobalIDString = 5758E37D251F656B007FB87C;
+			remoteInfo = "SwiftMaster-AW";
 		};
 		578B8F88251E18DD0017A84C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -62,24 +63,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		578B2944251F548C00496887 /* Embed App Extensions */ = {
+		5758E39E251F656D007FB87C /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				578B2931251F548B00496887 /* SwiftMaster-AW WatchKit Extension.appex in Embed App Extensions */,
+				5758E388251F656C007FB87C /* SwiftMaster-AW Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		578B2948251F548C00496887 /* Embed Watch Content */ = {
+		57FCA5F8251F6460009BE29B /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				578B2925251F548800496887 /* SwiftMaster-AW WatchKit App.app in Embed Watch Content */,
+				5758E39A251F656D007FB87C /* SwiftMaster-AW.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -87,21 +88,20 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5758E37E251F656B007FB87C /* SwiftMaster-AW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftMaster-AW.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5758E380251F656C007FB87C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5758E382251F656C007FB87C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5758E387251F656C007FB87C /* SwiftMaster-AW Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "SwiftMaster-AW Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5758E38E251F656D007FB87C /* SwiftMasterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMasterApp.swift; sourceTree = "<group>"; };
+		5758E390251F656D007FB87C /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		5758E392251F656D007FB87C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5758E395251F656D007FB87C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5758E397251F656D007FB87C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		578B28FB251E7B8500496887 /* Hands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hands.swift; sourceTree = "<group>"; };
 		578B2903251E944600496887 /* TimeProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeProvider.swift; sourceTree = "<group>"; };
 		578B2908251E94A400496887 /* SimpleClockFace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleClockFace.swift; sourceTree = "<group>"; };
 		578B2910251E94E300496887 /* Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
 		578B291E251E994300496887 /* watchface.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = watchface.png; sourceTree = "<group>"; };
-		578B2921251F548800496887 /* SwiftMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftMaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		578B2924251F548800496887 /* SwiftMaster-AW WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftMaster-AW WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		578B2929251F548B00496887 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		578B292B251F548B00496887 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		578B2930251F548B00496887 /* SwiftMaster-AW WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "SwiftMaster-AW WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		578B2937251F548B00496887 /* SwiftMasterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMasterApp.swift; sourceTree = "<group>"; };
-		578B2939251F548B00496887 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
-		578B293B251F548C00496887 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		578B293E251F548C00496887 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		578B2940251F548C00496887 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		578B8F76251E18DC0017A84C /* SwiftMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftMaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		578B8F79251E18DC0017A84C /* SwiftMasterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMasterApp.swift; sourceTree = "<group>"; };
 		578B8F7B251E18DC0017A84C /* SwiftMasterClockFace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMasterClockFace.swift; sourceTree = "<group>"; };
@@ -118,7 +118,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		578B292D251F548B00496887 /* Frameworks */ = {
+		5758E384251F656C007FB87C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -149,6 +149,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5758E37F251F656B007FB87C /* SwiftMaster-AW */ = {
+			isa = PBXGroup;
+			children = (
+				5758E380251F656C007FB87C /* Assets.xcassets */,
+				5758E382251F656C007FB87C /* Info.plist */,
+			);
+			path = "SwiftMaster-AW";
+			sourceTree = "<group>";
+		};
+		5758E38B251F656D007FB87C /* SwiftMaster-AW Extension */ = {
+			isa = PBXGroup;
+			children = (
+				5758E38E251F656D007FB87C /* SwiftMasterApp.swift */,
+				5758E390251F656D007FB87C /* ComplicationController.swift */,
+				5758E392251F656D007FB87C /* Assets.xcassets */,
+				5758E397251F656D007FB87C /* Info.plist */,
+				5758E394251F656D007FB87C /* Preview Content */,
+			);
+			path = "SwiftMaster-AW Extension";
+			sourceTree = "<group>";
+		};
+		5758E394251F656D007FB87C /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				5758E395251F656D007FB87C /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		5769BCBA251F57FE00E34428 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,35 +215,6 @@
 			path = Geometry;
 			sourceTree = "<group>";
 		};
-		578B2928251F548800496887 /* SwiftMaster-AW WatchKit App */ = {
-			isa = PBXGroup;
-			children = (
-				578B2929251F548B00496887 /* Assets.xcassets */,
-				578B292B251F548B00496887 /* Info.plist */,
-			);
-			path = "SwiftMaster-AW WatchKit App";
-			sourceTree = "<group>";
-		};
-		578B2934251F548B00496887 /* SwiftMaster-AW WatchKit Extension */ = {
-			isa = PBXGroup;
-			children = (
-				578B2937251F548B00496887 /* SwiftMasterApp.swift */,
-				578B2939251F548B00496887 /* ComplicationController.swift */,
-				578B293B251F548C00496887 /* Assets.xcassets */,
-				578B2940251F548C00496887 /* Info.plist */,
-				578B293D251F548C00496887 /* Preview Content */,
-			);
-			path = "SwiftMaster-AW WatchKit Extension";
-			sourceTree = "<group>";
-		};
-		578B293D251F548C00496887 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				578B293E251F548C00496887 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
 		578B8F6D251E18DC0017A84C = {
 			isa = PBXGroup;
 			children = (
@@ -235,9 +235,8 @@
 				578B8F76251E18DC0017A84C /* SwiftMaster.app */,
 				578B8F87251E18DD0017A84C /* SwiftMasterTests.xctest */,
 				578B8F92251E18DD0017A84C /* SwiftMasterUITests.xctest */,
-				578B2921251F548800496887 /* SwiftMaster.app */,
-				578B2924251F548800496887 /* SwiftMaster-AW WatchKit App.app */,
-				578B2930251F548B00496887 /* SwiftMaster-AW WatchKit Extension.appex */,
+				5758E37E251F656B007FB87C /* SwiftMaster-AW.app */,
+				5758E387251F656C007FB87C /* SwiftMaster-AW Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -281,8 +280,8 @@
 		57CEA5F4251F57CA005C87F1 /* watchOS */ = {
 			isa = PBXGroup;
 			children = (
-				578B2934251F548B00496887 /* SwiftMaster-AW WatchKit Extension */,
-				578B2928251F548800496887 /* SwiftMaster-AW WatchKit App */,
+				5758E38B251F656D007FB87C /* SwiftMaster-AW Extension */,
+				5758E37F251F656B007FB87C /* SwiftMaster-AW */,
 			);
 			path = watchOS;
 			sourceTree = "<group>";
@@ -290,55 +289,38 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		578B2920251F548800496887 /* SwiftMaster-AW */ = {
+		5758E37D251F656B007FB87C /* SwiftMaster-AW */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 578B2949251F548C00496887 /* Build configuration list for PBXNativeTarget "SwiftMaster-AW" */;
+			buildConfigurationList = 5758E39F251F656D007FB87C /* Build configuration list for PBXNativeTarget "SwiftMaster-AW" */;
 			buildPhases = (
-				578B291F251F548800496887 /* Resources */,
-				578B2948251F548C00496887 /* Embed Watch Content */,
+				5758E37C251F656B007FB87C /* Resources */,
+				5758E39E251F656D007FB87C /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				578B2927251F548800496887 /* PBXTargetDependency */,
+				5758E38A251F656C007FB87C /* PBXTargetDependency */,
 			);
 			name = "SwiftMaster-AW";
 			productName = "SwiftMaster-AW";
-			productReference = 578B2921251F548800496887 /* SwiftMaster.app */;
-			productType = "com.apple.product-type.application.watchapp2-container";
-		};
-		578B2923251F548800496887 /* SwiftMaster-AW WatchKit App */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 578B2945251F548C00496887 /* Build configuration list for PBXNativeTarget "SwiftMaster-AW WatchKit App" */;
-			buildPhases = (
-				578B2922251F548800496887 /* Resources */,
-				578B2944251F548C00496887 /* Embed App Extensions */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				578B2933251F548B00496887 /* PBXTargetDependency */,
-			);
-			name = "SwiftMaster-AW WatchKit App";
-			productName = "SwiftMaster-AW WatchKit App";
-			productReference = 578B2924251F548800496887 /* SwiftMaster-AW WatchKit App.app */;
+			productReference = 5758E37E251F656B007FB87C /* SwiftMaster-AW.app */;
 			productType = "com.apple.product-type.application.watchapp2";
 		};
-		578B292F251F548B00496887 /* SwiftMaster-AW WatchKit Extension */ = {
+		5758E386251F656C007FB87C /* SwiftMaster-AW Extension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 578B2941251F548C00496887 /* Build configuration list for PBXNativeTarget "SwiftMaster-AW WatchKit Extension" */;
+			buildConfigurationList = 5758E39B251F656D007FB87C /* Build configuration list for PBXNativeTarget "SwiftMaster-AW Extension" */;
 			buildPhases = (
-				578B292C251F548B00496887 /* Sources */,
-				578B292D251F548B00496887 /* Frameworks */,
-				578B292E251F548B00496887 /* Resources */,
+				5758E383251F656C007FB87C /* Sources */,
+				5758E384251F656C007FB87C /* Frameworks */,
+				5758E385251F656C007FB87C /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "SwiftMaster-AW WatchKit Extension";
-			productName = "SwiftMaster-AW WatchKit Extension";
-			productReference = 578B2930251F548B00496887 /* SwiftMaster-AW WatchKit Extension.appex */;
+			name = "SwiftMaster-AW Extension";
+			productName = "SwiftMaster-AW Extension";
+			productReference = 5758E387251F656C007FB87C /* SwiftMaster-AW Extension.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
 		};
 		578B8F75251E18DC0017A84C /* SwiftMaster */ = {
@@ -348,10 +330,12 @@
 				578B8F72251E18DC0017A84C /* Sources */,
 				578B8F73251E18DC0017A84C /* Frameworks */,
 				578B8F74251E18DC0017A84C /* Resources */,
+				57FCA5F8251F6460009BE29B /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				5758E399251F656D007FB87C /* PBXTargetDependency */,
 			);
 			name = SwiftMaster;
 			productName = SwiftMaster;
@@ -403,13 +387,10 @@
 				LastSwiftUpdateCheck = 1220;
 				LastUpgradeCheck = 1220;
 				TargetAttributes = {
-					578B2920251F548800496887 = {
+					5758E37D251F656B007FB87C = {
 						CreatedOnToolsVersion = 12.2;
 					};
-					578B2923251F548800496887 = {
-						CreatedOnToolsVersion = 12.2;
-					};
-					578B292F251F548B00496887 = {
+					5758E386251F656C007FB87C = {
 						CreatedOnToolsVersion = 12.2;
 					};
 					578B8F75251E18DC0017A84C = {
@@ -441,35 +422,27 @@
 				578B8F75251E18DC0017A84C /* SwiftMaster */,
 				578B8F86251E18DD0017A84C /* SwiftMasterTests */,
 				578B8F91251E18DD0017A84C /* SwiftMasterUITests */,
-				578B2920251F548800496887 /* SwiftMaster-AW */,
-				578B2923251F548800496887 /* SwiftMaster-AW WatchKit App */,
-				578B292F251F548B00496887 /* SwiftMaster-AW WatchKit Extension */,
+				5758E37D251F656B007FB87C /* SwiftMaster-AW */,
+				5758E386251F656C007FB87C /* SwiftMaster-AW Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		578B291F251F548800496887 /* Resources */ = {
+		5758E37C251F656B007FB87C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5758E381251F656C007FB87C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		578B2922251F548800496887 /* Resources */ = {
+		5758E385251F656C007FB87C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				578B292A251F548B00496887 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		578B292E251F548B00496887 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				578B293F251F548C00496887 /* Preview Assets.xcassets in Resources */,
-				578B293C251F548C00496887 /* Assets.xcassets in Resources */,
+				5758E396251F656D007FB87C /* Preview Assets.xcassets in Resources */,
+				5758E393251F656D007FB87C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,16 +472,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		578B292C251F548B00496887 /* Sources */ = {
+		5758E383251F656C007FB87C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				578B295F251F54EE00496887 /* Hands.swift in Sources */,
-				578B2938251F548B00496887 /* SwiftMasterApp.swift in Sources */,
-				578B2966251F54F700496887 /* Time.swift in Sources */,
-				578B296D251F54FA00496887 /* TimeProvider.swift in Sources */,
-				578B293A251F548B00496887 /* ComplicationController.swift in Sources */,
-				578B2958251F54BF00496887 /* SwiftMasterClockFace.swift in Sources */,
+				5758E3AC251F6591007FB87C /* Time.swift in Sources */,
+				5758E38F251F656D007FB87C /* SwiftMasterApp.swift in Sources */,
+				5758E3B0251F659C007FB87C /* Hands.swift in Sources */,
+				5758E391251F656D007FB87C /* ComplicationController.swift in Sources */,
+				5758E3AE251F6597007FB87C /* SimpleClockFace.swift in Sources */,
+				5758E3AD251F6594007FB87C /* TimeProvider.swift in Sources */,
+				5758E3AF251F659A007FB87C /* SwiftMasterClockFace.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,15 +518,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		578B2927251F548800496887 /* PBXTargetDependency */ = {
+		5758E38A251F656C007FB87C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 578B2923251F548800496887 /* SwiftMaster-AW WatchKit App */;
-			targetProxy = 578B2926251F548800496887 /* PBXContainerItemProxy */;
+			target = 5758E386251F656C007FB87C /* SwiftMaster-AW Extension */;
+			targetProxy = 5758E389251F656C007FB87C /* PBXContainerItemProxy */;
 		};
-		578B2933251F548B00496887 /* PBXTargetDependency */ = {
+		5758E399251F656D007FB87C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 578B292F251F548B00496887 /* SwiftMaster-AW WatchKit Extension */;
-			targetProxy = 578B2932251F548B00496887 /* PBXContainerItemProxy */;
+			target = 5758E37D251F656B007FB87C /* SwiftMaster-AW */;
+			targetProxy = 5758E398251F656D007FB87C /* PBXContainerItemProxy */;
 		};
 		578B8F89251E18DD0017A84C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -567,21 +541,21 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		578B2942251F548C00496887 /* Debug */ = {
+		5758E39C251F656D007FB87C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"watchOS/SwiftMaster-AW WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"watchOS/SwiftMaster-AW Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = 3C42F7N9CQ;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "watchOS/SwiftMaster-AW WatchKit Extension/Info.plist";
+				INFOPLIST_FILE = "watchOS/SwiftMaster-AW Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "co.jossy.SwiftMaster-AW.watchkitapp.watchkitextension";
+				PRODUCT_BUNDLE_IDENTIFIER = co.jossy.SwiftMaster.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -591,21 +565,21 @@
 			};
 			name = Debug;
 		};
-		578B2943251F548C00496887 /* Release */ = {
+		5758E39D251F656D007FB87C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"watchOS/SwiftMaster-AW WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"watchOS/SwiftMaster-AW Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = 3C42F7N9CQ;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "watchOS/SwiftMaster-AW WatchKit Extension/Info.plist";
+				INFOPLIST_FILE = "watchOS/SwiftMaster-AW Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "co.jossy.SwiftMaster-AW.watchkitapp.watchkitextension";
+				PRODUCT_BUNDLE_IDENTIFIER = co.jossy.SwiftMaster.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -615,7 +589,7 @@
 			};
 			name = Release;
 		};
-		578B2946251F548C00496887 /* Debug */ = {
+		5758E3A0251F656D007FB87C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -623,9 +597,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3C42F7N9CQ;
-				IBSC_MODULE = SwiftMaster_AW_WatchKit_Extension;
-				INFOPLIST_FILE = "watchOS/SwiftMaster-AW WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "co.jossy.SwiftMaster-AW.watchkitapp";
+				IBSC_MODULE = SwiftMaster_AW_Extension;
+				INFOPLIST_FILE = "watchOS/SwiftMaster-AW/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = co.jossy.SwiftMaster.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -635,7 +609,7 @@
 			};
 			name = Debug;
 		};
-		578B2947251F548C00496887 /* Release */ = {
+		5758E3A1251F656D007FB87C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -643,41 +617,15 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3C42F7N9CQ;
-				IBSC_MODULE = SwiftMaster_AW_WatchKit_Extension;
-				INFOPLIST_FILE = "watchOS/SwiftMaster-AW WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "co.jossy.SwiftMaster-AW.watchkitapp";
+				IBSC_MODULE = SwiftMaster_AW_Extension;
+				INFOPLIST_FILE = "watchOS/SwiftMaster-AW/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = co.jossy.SwiftMaster.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 7.0;
-			};
-			name = Release;
-		};
-		578B294A251F548C00496887 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3C42F7N9CQ;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "co.jossy.SwiftMaster-AW";
-				PRODUCT_NAME = SwiftMaster;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		578B294B251F548C00496887 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3C42F7N9CQ;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "co.jossy.SwiftMaster-AW";
-				PRODUCT_NAME = SwiftMaster;
-				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -928,29 +876,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		578B2941251F548C00496887 /* Build configuration list for PBXNativeTarget "SwiftMaster-AW WatchKit Extension" */ = {
+		5758E39B251F656D007FB87C /* Build configuration list for PBXNativeTarget "SwiftMaster-AW Extension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				578B2942251F548C00496887 /* Debug */,
-				578B2943251F548C00496887 /* Release */,
+				5758E39C251F656D007FB87C /* Debug */,
+				5758E39D251F656D007FB87C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		578B2945251F548C00496887 /* Build configuration list for PBXNativeTarget "SwiftMaster-AW WatchKit App" */ = {
+		5758E39F251F656D007FB87C /* Build configuration list for PBXNativeTarget "SwiftMaster-AW" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				578B2946251F548C00496887 /* Debug */,
-				578B2947251F548C00496887 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		578B2949251F548C00496887 /* Build configuration list for PBXNativeTarget "SwiftMaster-AW" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				578B294A251F548C00496887 /* Debug */,
-				578B294B251F548C00496887 /* Release */,
+				5758E3A0251F656D007FB87C /* Debug */,
+				5758E3A1251F656D007FB87C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

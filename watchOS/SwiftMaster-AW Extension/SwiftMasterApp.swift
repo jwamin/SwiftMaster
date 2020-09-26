@@ -1,6 +1,6 @@
 //
 //  SwiftMasterApp.swift
-//  SwiftMaster-AW WatchKit Extension
+//  SwiftMaster-AW Extension
 //
 //  Created by Joss Manger on 9/26/20.
 //
