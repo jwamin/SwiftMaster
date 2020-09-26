@@ -35,6 +35,17 @@ struct SwiftMasterClockFace: View {
     return HourHandFill().frame(width: width, height: height, alignment: .bottom).rotationEffect(angle, anchor: .bottom).position(x: reader.size.width/2, y: reader.size.height/2).offset(y: offsetCenter)
   }
   
+  fileprivate func createSecondHand(_ reader: GeometryProxy, angle: Angle) -> some View {
+    
+    
+    let height = reader.size.height/2
+    let width = reader.size.width/8
+    //hands
+    let offsetCenter:CGFloat = -(height/2)
+    
+    return SecondsHand().frame(width: width, height: height, alignment: .bottom).rotationEffect(angle, anchor: .bottom).position(x: reader.size.width/2, y: reader.size.height/2).offset(y: offsetCenter)
+  }
+  
   fileprivate func renderDate(_ reader: GeometryProxy, color: Color) -> some View {
     
     let usedHeight = reader.size.height/2
@@ -64,7 +75,8 @@ struct SwiftMasterClockFace: View {
 
         createMinuteHand(reader, width: reader.size.width/7.5, angle: time.minuteHandAngle())
         
-        createHand(reader, width: 2, angle:time.secondHandAngle(),color:.red)
+        //createHand(reader, width: 2, angle:time.secondHandAngle(),color:.red)
+        createSecondHand(reader, angle: time.secondHandAngle())
         
         //notches
         

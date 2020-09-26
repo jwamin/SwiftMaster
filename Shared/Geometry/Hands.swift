@@ -95,15 +95,11 @@ struct DiverHand: Shape {
     let distance:CGFloat = 7
     
     let topMiddle = CGPoint(x: widthQuarter * 2, y: 0)
-    //let bottomMiddle = CGPoint(x: rect.size.width / 2, y: rect.size.height)
-    
     
     let rightSegment = CGPoint(x: rect.size.width, y: rect.size.height / topSegmentOffset)
     let bottomMiddle1 = CGPoint(x: widthQuarter * 3, y:  height34 * distance)
     let bottomMiddle2 = CGPoint(x: widthQuarter, y:  height34 * distance)
     let leftSegment = CGPoint(x: 0, y: rect.size.height / topSegmentOffset)
-    
-
     
     path.move(to: topMiddle)
     path.addLine(to: rightSegment)
@@ -138,12 +134,37 @@ struct DiverHand: Shape {
   
 }
 
+struct SecondsHand: View {
+  
+  let tipHeight:CGFloat = 4
+  let handWidth: CGFloat = 20
+  var body: some View {
+    
+    ZStack{
+      GeometryReader { reader in
+        
+        //main hand
+        Rectangle().fill().foregroundColor(.gray).frame(width: reader.size.width / handWidth, height: reader.size.height, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/).position(x: reader.size.width/2,y:reader.size.height / 2)
+        
+        //tip
+        Rectangle().fill().foregroundColor(.red).frame(width: reader.size.width / handWidth, height: reader.size.height / tipHeight, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/).position(x: reader.size.width/2, y: reader.size.height / tipHeight / 2)
+        
+        //circle
+        Circle().fill().foregroundColor(.gray).frame(width: reader.size.width / 2, height: reader.size.width / 2, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/).overlay(Circle().fill().foregroundColor(.white).scaleEffect(0.8)).position(x: reader.size.width/2, y: reader.size.height / 3)
+      }
+    }
+    
+    
+  }
+  
+}
+
 
 struct Hands_Previews: PreviewProvider {
     static var previews: some View {
       Group{
         MinuteHandFill().previewLayout(.sizeThatFits)
-        //MinuteHandStroke().previewLayout(.sizeThatFits)
+        SecondsHand().previewLayout(.sizeThatFits)
         HourHandFill().previewLayout(.sizeThatFits)
       }
     }
