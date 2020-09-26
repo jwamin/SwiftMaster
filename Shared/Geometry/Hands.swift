@@ -19,7 +19,7 @@ struct MinuteHandFill: View {
     var body: some View {
       ZStack{
         GeometryReader { reader in
-        DiverHand(topSegmentOffset: 4)
+          DiverHand(topSegmentOffset: 4,cutoutOffset: 1.2, squareOffset: false)
           .fill().foregroundColor(.blue)
           Triangle().fill().frame(width: reader.size.width, height: reader.size.height / 4, alignment: .center).scaleEffect(0.7, anchor: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/).offset(y: reader.size.height/30)
           Rectangle().fill().frame(width: reader.size.width/24, height: reader.size.height/8, alignment: .center).position(x: reader.size.width/2, y: reader.size.height-reader.size.height/16)
@@ -33,11 +33,11 @@ struct HourHandFill: View {
     var body: some View {
       ZStack{
         GeometryReader { reader in
-        DiverHand(topSegmentOffset: 6)
+          DiverHand(topSegmentOffset: 6,cutoutOffset:2.2, squareOffset: true)
           .fill().foregroundColor(.blue)
           Circle().fill().frame(width: reader.size.width, height: reader.size.height / 3, alignment: .center).scaleEffect(0.7, anchor: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/).offset(y: reader.size.height/25)
           Rectangle().fill().frame(width: reader.size.width/24, height: reader.size.height/8, alignment: .center).position(x: reader.size.width/2, y: reader.size.height-reader.size.height/16)
-          Circle().fill().frame(width: reader.size.width/6, height: reader.size.width/6, alignment: .center).position(x: reader.size.width/2, y: reader.size.height)
+          Circle().fill().frame(width: reader.size.width/7, height: reader.size.height/7, alignment: .center).position(x: reader.size.width/2, y: reader.size.height)
         }
       }
     }
@@ -80,6 +80,8 @@ struct Triangle: Shape {
 struct DiverHand: Shape {
   
   let topSegmentOffset: CGFloat
+  let cutoutOffset: CGFloat
+  let squareOffset: Bool
   
   func path(in rect: CGRect) -> Path {
     
@@ -87,6 +89,8 @@ struct DiverHand: Shape {
     
     let widthQuarter = rect.size.width / 4
     let height34 = rect.size.height / 8
+    
+    let center = CGPoint(x: rect.size.width / 2, y: rect.size.height / 2)
     
     let distance:CGFloat = 7
     
@@ -99,7 +103,7 @@ struct DiverHand: Shape {
     let bottomMiddle2 = CGPoint(x: widthQuarter, y:  height34 * distance)
     let leftSegment = CGPoint(x: 0, y: rect.size.height / topSegmentOffset)
     
-    //let bottomMiddle3 = CGPoint(x: widthQuarter * 2, y:  height34 * distance)
+
     
     path.move(to: topMiddle)
     path.addLine(to: rightSegment)
@@ -108,9 +112,25 @@ struct DiverHand: Shape {
     path.addLine(to: leftSegment)
     path.closeSubpath()
     
-//    path.move(to: bottomMiddle3)
-//    path.addLine(to: bottomMiddle)
-//    path.closeSubpath()
+    let rightSegmentOffset = CGPoint(x: widthQuarter * 3, y: rect.size.height / topSegmentOffset * cutoutOffset)
+    
+    let leftSegmentOffset = CGPoint(x: widthQuarter, y: rect.size.height / topSegmentOffset * cutoutOffset)
+    
+    let bottomMiddleOffset = CGPoint(x: widthQuarter * 2, y: height34 * 6.5)
+    
+    path.move(to: rightSegmentOffset)
+    path.addLine(to: leftSegmentOffset)
+    if squareOffset {
+      let bottomMiddleOffset1 = CGPoint(x: widthQuarter * 1.5 , y: height34 * 6.5)
+      let bottomMiddleOffset2 = CGPoint(x: widthQuarter * 2.5, y: height34 * 6.5)
+      path.addLine(to: bottomMiddleOffset1)
+      path.addLine(to: bottomMiddleOffset2)
+    } else {
+      path.addLine(to: bottomMiddleOffset)
+    }
+    
+    path.closeSubpath()
+
     
     return path
     

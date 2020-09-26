@@ -17,8 +17,7 @@ struct SwiftMasterClockFace: View {
   
   fileprivate func createMinuteHand(_ reader: GeometryProxy, width: CGFloat, height: CGFloat? = nil, angle: Angle) -> some View {
     
-    
-    let usedHeight = height ?? reader.size.height/2
+    let usedHeight = height ?? reader.size.height/2 * 0.95
     //hands
     let offsetCenter:CGFloat = -(usedHeight/2)
     
@@ -29,7 +28,7 @@ struct SwiftMasterClockFace: View {
     
     
     let height = reader.size.height/3
-    let width = reader.size.height/6
+    let width = reader.size.width/8
     //hands
     let offsetCenter:CGFloat = -(height/2)
     
@@ -53,7 +52,7 @@ struct SwiftMasterClockFace: View {
       .position(x: reader.size.width/2, y: reader.size.height).offset(y: -(usedHeight/4))
   }
   
-  var body: some View {
+  var face: some View {
     ZStack{
       GeometryReader { reader in
         
@@ -63,17 +62,28 @@ struct SwiftMasterClockFace: View {
         
         createHourHand(reader, angle: time.hourAngle)
 
-        createMinuteHand(reader, width: reader.size.width/6.5, angle: time.minuteHandAngle())
+        createMinuteHand(reader, width: reader.size.width/7.5, angle: time.minuteHandAngle())
         
         createHand(reader, width: 2, angle:time.secondHandAngle(),color:.red)
         
         //notches
         
       }
-    }
-    .aspectRatio(1, contentMode: .fit)
-    .padding()
-    .drawingGroup()
+    }.aspectRatio(1, contentMode: .fit)
+  }
+  
+  var body: some View {
+
+    #if os(watchOS)
+    face
+      .padding(1)
+      .drawingGroup()
+    #else
+    face
+      .padding()
+      .drawingGroup()
+    #endif
+
   }
 }
 
