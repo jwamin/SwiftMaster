@@ -40,8 +40,17 @@ struct SwiftMasterClockFace: View {
     
     let usedHeight = reader.size.height/2
     //hands
+    #if os(watchOS)
+    let font: Font = .body
+    #else
+    let font: Font = .title
+    #endif
     
-    return Text("\(time.dayOfMonth)").font(.title).bold().foregroundColor(color).position(x: reader.size.width/2, y: reader.size.height).offset(y: -(usedHeight/4))
+    return Text("\(time.dayOfMonth)")
+      .font(font)
+      .bold()
+      .foregroundColor(color)
+      .position(x: reader.size.width/2, y: reader.size.height).offset(y: -(usedHeight/4))
   }
   
   var body: some View {
