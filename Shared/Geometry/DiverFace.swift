@@ -11,6 +11,7 @@ struct DiverFace: View {
   
   let date: Int
   let one = 360 / 12
+  let sixty = 360 / 60
   let thickness:CGFloat = 2
   
   fileprivate func renderDate(_ reader: GeometryProxy, color: Color) -> some View {
@@ -55,6 +56,11 @@ struct DiverFace: View {
     
     ZStack {
       GeometryReader { reader in
+        
+        ForEach(1..<61){ tooth in Rectangle().fill().foregroundColor(.gray).frame(width: 2, height: reader.size.height / ((tooth % 5 == 0) ? 20 : 40), alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/).position(x: reader.size.width/2, y: reader.size.height/2).transformEffect(.init(translationX: 0, y: -reader.size.width/2.5)).rotationEffect(.degrees(Double(sixty * tooth)))
+          }
+        
+        
         ForEach(1..<13){ num in
           
           getDecoration(reader: reader, index: num)
