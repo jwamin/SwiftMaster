@@ -7,7 +7,7 @@
 ### Features
 
 * Skeleton Hands
-* 24Hour hand with GMT Cerachrom on Apple Watch
+* Tap activated, 24Hour hand with GMT Cerachrom on Apple Watch
 * Classic "Diver" face
 * Day of Month Complication
 * "Authentic" ticking animation
