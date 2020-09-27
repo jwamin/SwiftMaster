@@ -29,16 +29,19 @@ struct DiverFace: View {
       return AnyView(makeCircle(reader: reader, size: 10)
                       .transformEffect(.init(translationX: 0, y: -reader.size.width/2.5)).rotationEffect(.degrees(Double(one * index))).position(x: reader.size.width/2, y: reader.size.height/2))
     case 3, 9:
-      return AnyView(Rectangle().fill().border(Color.gray, width: thickness).foregroundColor(.white)
+      return AnyView(Rectangle().fill().foregroundColor(.gray)
+                                .overlay(Rectangle().fill().scaleEffect(0.8).foregroundColor(.white))
                       .frame(width: reader.size.width / 20,height: reader.size.width / 9, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/).transformEffect(.init(translationX: 0, y: -reader.size.width/2.5))
                       .rotationEffect(.degrees(Double(one * index)))
                       .position(x: reader.size.width/2, y: reader.size.height/2).position(x: reader.size.width/2, y: reader.size.height/2))
     case 6:
-      return AnyView(Rectangle().fill().border(Color.gray, width: thickness).foregroundColor(.white).frame(width: reader.size.width / 20,height: reader.size.width / 20, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/).position(x: reader.size.width/2, y: reader.size.height/2).transformEffect(.init(translationX: 0, y: -reader.size.width/2.5)).rotationEffect(.degrees(Double(one * index))))
+      return AnyView(     Rectangle().fill().foregroundColor(.gray)
+                            .overlay(Rectangle().fill().scaleEffect(0.8).foregroundColor(.white)).frame(width: reader.size.width / 20,height: reader.size.width / 20, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/).position(x: reader.size.width/2, y: reader.size.height/2).transformEffect(.init(translationX: 0, y: -reader.size.width/2.5)).rotationEffect(.degrees(Double(one * index))))
     case 12:
       return AnyView(HStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: reader.size.width/50, content: {
         ForEach(0..<2){ num in
-          Rectangle().fill().border(Color.gray, width: thickness).foregroundColor(.white)
+          Rectangle().fill().foregroundColor(.gray)
+            .overlay(Rectangle().fill().scaleEffect(0.8).foregroundColor(.white))
             .frame(width: reader.size.width / 20,height: reader.size.width / 9, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
         }
       }).position(x: reader.size.width/2, y: reader.size.height/2).transformEffect(.init(translationX: 0, y: -reader.size.width/2.5)))
