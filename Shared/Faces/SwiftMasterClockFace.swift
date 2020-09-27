@@ -80,7 +80,8 @@ struct SwiftMasterClockFace: View {
     ZStack{
       GeometryReader { reader in
         //Cerachrom()
-        Circle().stroke(style:StrokeStyle(lineWidth: 2)).foregroundColor(Color.red)
+        DiverFace().frame(width: reader.size.width, height: reader.size.height, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+        //Circle().stroke(style:StrokeStyle(lineWidth: 2)).foregroundColor(Color.red)
         
         renderDate(reader, color: .red)
         if show24Hour {

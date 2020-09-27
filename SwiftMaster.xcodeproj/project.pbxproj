@@ -11,6 +11,8 @@
 		574F5F1125202E2D00ABF7D3 /* Cerachrom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574F5F0F25202E2D00ABF7D3 /* Cerachrom.swift */; };
 		574F5F182520369500ABF7D3 /* Face.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574F5F172520369500ABF7D3 /* Face.swift */; };
 		574F5F192520369500ABF7D3 /* Face.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574F5F172520369500ABF7D3 /* Face.swift */; };
+		5751B08E2520C29600A30C52 /* DiverFace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5751B08D2520C29600A30C52 /* DiverFace.swift */; };
+		5751B08F2520C29600A30C52 /* DiverFace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5751B08D2520C29600A30C52 /* DiverFace.swift */; };
 		5758E381251F656C007FB87C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5758E380251F656C007FB87C /* Assets.xcassets */; };
 		5758E388251F656C007FB87C /* SwiftMaster-AW Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5758E387251F656C007FB87C /* SwiftMaster-AW Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		5758E38F251F656D007FB87C /* SwiftMasterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5758E38E251F656D007FB87C /* SwiftMasterApp.swift */; };
@@ -94,6 +96,7 @@
 /* Begin PBXFileReference section */
 		574F5F0F25202E2D00ABF7D3 /* Cerachrom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cerachrom.swift; sourceTree = "<group>"; };
 		574F5F172520369500ABF7D3 /* Face.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Face.swift; sourceTree = "<group>"; };
+		5751B08D2520C29600A30C52 /* DiverFace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiverFace.swift; sourceTree = "<group>"; };
 		5758E37E251F656B007FB87C /* SwiftMaster-AW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftMaster-AW.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5758E380251F656C007FB87C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5758E382251F656C007FB87C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -220,6 +223,7 @@
 				578B28FB251E7B8500496887 /* Hands.swift */,
 				574F5F0F25202E2D00ABF7D3 /* Cerachrom.swift */,
 				574F5F172520369500ABF7D3 /* Face.swift */,
+				5751B08D2520C29600A30C52 /* DiverFace.swift */,
 			);
 			path = Geometry;
 			sourceTree = "<group>";
@@ -489,6 +493,7 @@
 				5758E3AC251F6591007FB87C /* Time.swift in Sources */,
 				5758E38F251F656D007FB87C /* SwiftMasterApp.swift in Sources */,
 				5758E3B0251F659C007FB87C /* Hands.swift in Sources */,
+				5751B08F2520C29600A30C52 /* DiverFace.swift in Sources */,
 				5758E391251F656D007FB87C /* ComplicationController.swift in Sources */,
 				574F5F192520369500ABF7D3 /* Face.swift in Sources */,
 				5758E3AE251F6597007FB87C /* SimpleClockFace.swift in Sources */,
@@ -502,6 +507,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5751B08E2520C29600A30C52 /* DiverFace.swift in Sources */,
 				574F5F1025202E2D00ABF7D3 /* Cerachrom.swift in Sources */,
 				578B2911251E94E300496887 /* Time.swift in Sources */,
 				578B8F7C251E18DC0017A84C /* SwiftMasterClockFace.swift in Sources */,
