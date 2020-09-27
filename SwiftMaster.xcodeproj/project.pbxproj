@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		574F5EC8252011C000ABF7D3 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 574F5EC7252011C000ABF7D3 /* WidgetKit.framework */; };
+		574F5ECA252011C000ABF7D3 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 574F5EC9252011C000ABF7D3 /* SwiftUI.framework */; };
+		574F5ECD252011C000ABF7D3 /* SwiftMaster_Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574F5ECC252011C000ABF7D3 /* SwiftMaster_Widget.swift */; };
+		574F5ED0252011C100ABF7D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 574F5ECF252011C100ABF7D3 /* Assets.xcassets */; };
+		574F5ED2252011C100ABF7D3 /* SwiftMaster_Widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 574F5ECE252011C000ABF7D3 /* SwiftMaster_Widget.intentdefinition */; };
+		574F5ED3252011C100ABF7D3 /* SwiftMaster_Widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 574F5ECE252011C000ABF7D3 /* SwiftMaster_Widget.intentdefinition */; };
+		574F5ED6252011C100ABF7D3 /* SwiftMaster-WidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 574F5EC5252011C000ABF7D3 /* SwiftMaster-WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		574F5EE1252011F300ABF7D3 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578B2910251E94E300496887 /* Time.swift */; };
+		574F5EE8252011F600ABF7D3 /* TimeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578B2903251E944600496887 /* TimeProvider.swift */; };
+		574F5EEF252011F900ABF7D3 /* SimpleClockFace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578B2908251E94A400496887 /* SimpleClockFace.swift */; };
+		574F5EF6252011FC00ABF7D3 /* SwiftMasterClockFace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578B8F7B251E18DC0017A84C /* SwiftMasterClockFace.swift */; };
+		574F5EFD252011FF00ABF7D3 /* Hands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578B28FB251E7B8500496887 /* Hands.swift */; };
 		5758E381251F656C007FB87C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5758E380251F656C007FB87C /* Assets.xcassets */; };
 		5758E388251F656C007FB87C /* SwiftMaster-AW Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5758E387251F656C007FB87C /* SwiftMaster-AW Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		5758E38F251F656D007FB87C /* SwiftMasterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5758E38E251F656D007FB87C /* SwiftMasterApp.swift */; };
@@ -32,6 +44,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		574F5ED4252011C100ABF7D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 578B8F6E251E18DC0017A84C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 574F5EC4252011C000ABF7D3;
+			remoteInfo = "SwiftMaster-WidgetExtension";
+		};
 		5758E389251F656C007FB87C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 578B8F6E251E18DC0017A84C /* Project object */;
@@ -63,6 +82,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		574F5ED7252011C100ABF7D3 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				574F5ED6252011C100ABF7D3 /* SwiftMaster-WidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5758E39E251F656D007FB87C /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -88,6 +118,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		574F5EC5252011C000ABF7D3 /* SwiftMaster-WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "SwiftMaster-WidgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		574F5EC7252011C000ABF7D3 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		574F5EC9252011C000ABF7D3 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		574F5ECC252011C000ABF7D3 /* SwiftMaster_Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMaster_Widget.swift; sourceTree = "<group>"; };
+		574F5ECE252011C000ABF7D3 /* SwiftMaster_Widget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = SwiftMaster_Widget.intentdefinition; sourceTree = "<group>"; };
+		574F5ECF252011C100ABF7D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		574F5ED1252011C100ABF7D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5758E37E251F656B007FB87C /* SwiftMaster-AW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftMaster-AW.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5758E380251F656C007FB87C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5758E382251F656C007FB87C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -119,6 +156,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		574F5EC2252011C000ABF7D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				574F5ECA252011C000ABF7D3 /* SwiftUI.framework in Frameworks */,
+				574F5EC8252011C000ABF7D3 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5758E384251F656C007FB87C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -150,6 +196,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		574F5EC6252011C000ABF7D3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				574F5EC7252011C000ABF7D3 /* WidgetKit.framework */,
+				574F5EC9252011C000ABF7D3 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		574F5ECB252011C000ABF7D3 /* SwiftMaster-Widget */ = {
+			isa = PBXGroup;
+			children = (
+				574F5ECC252011C000ABF7D3 /* SwiftMaster_Widget.swift */,
+				574F5ECE252011C000ABF7D3 /* SwiftMaster_Widget.intentdefinition */,
+				574F5ECF252011C100ABF7D3 /* Assets.xcassets */,
+				574F5ED1252011C100ABF7D3 /* Info.plist */,
+			);
+			path = "SwiftMaster-Widget";
+			sourceTree = "<group>";
+		};
 		5758E37F251F656B007FB87C /* SwiftMaster-AW */ = {
 			isa = PBXGroup;
 			children = (
@@ -227,6 +293,8 @@
 				57CEA5F4251F57CA005C87F1 /* watchOS */,
 				578B8F8A251E18DD0017A84C /* SwiftMasterTests */,
 				578B8F95251E18DD0017A84C /* SwiftMasterUITests */,
+				574F5ECB252011C000ABF7D3 /* SwiftMaster-Widget */,
+				574F5EC6252011C000ABF7D3 /* Frameworks */,
 				578B8F77251E18DC0017A84C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -239,6 +307,7 @@
 				578B8F92251E18DD0017A84C /* SwiftMasterUITests.xctest */,
 				5758E37E251F656B007FB87C /* SwiftMaster-AW.app */,
 				5758E387251F656C007FB87C /* SwiftMaster-AW Extension.appex */,
+				574F5EC5252011C000ABF7D3 /* SwiftMaster-WidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -291,6 +360,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		574F5EC4252011C000ABF7D3 /* SwiftMaster-WidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 574F5EDA252011C100ABF7D3 /* Build configuration list for PBXNativeTarget "SwiftMaster-WidgetExtension" */;
+			buildPhases = (
+				574F5EC1252011C000ABF7D3 /* Sources */,
+				574F5EC2252011C000ABF7D3 /* Frameworks */,
+				574F5EC3252011C000ABF7D3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SwiftMaster-WidgetExtension";
+			productName = "SwiftMaster-WidgetExtension";
+			productReference = 574F5EC5252011C000ABF7D3 /* SwiftMaster-WidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		5758E37D251F656B007FB87C /* SwiftMaster-AW */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5758E39F251F656D007FB87C /* Build configuration list for PBXNativeTarget "SwiftMaster-AW" */;
@@ -333,11 +419,13 @@
 				578B8F73251E18DC0017A84C /* Frameworks */,
 				578B8F74251E18DC0017A84C /* Resources */,
 				57FCA5F8251F6460009BE29B /* Embed Watch Content */,
+				574F5ED7252011C100ABF7D3 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				5758E399251F656D007FB87C /* PBXTargetDependency */,
+				574F5ED5252011C100ABF7D3 /* PBXTargetDependency */,
 			);
 			name = SwiftMaster;
 			productName = SwiftMaster;
@@ -389,6 +477,9 @@
 				LastSwiftUpdateCheck = 1220;
 				LastUpgradeCheck = 1220;
 				TargetAttributes = {
+					574F5EC4252011C000ABF7D3 = {
+						CreatedOnToolsVersion = 12.2;
+					};
 					5758E37D251F656B007FB87C = {
 						CreatedOnToolsVersion = 12.2;
 					};
@@ -426,11 +517,20 @@
 				578B8F91251E18DD0017A84C /* SwiftMasterUITests */,
 				5758E37D251F656B007FB87C /* SwiftMaster-AW */,
 				5758E386251F656C007FB87C /* SwiftMaster-AW Extension */,
+				574F5EC4252011C000ABF7D3 /* SwiftMaster-WidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		574F5EC3252011C000ABF7D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				574F5ED0252011C100ABF7D3 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5758E37C251F656B007FB87C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -474,6 +574,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		574F5EC1252011C000ABF7D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				574F5EE1252011F300ABF7D3 /* Time.swift in Sources */,
+				574F5ED2252011C100ABF7D3 /* SwiftMaster_Widget.intentdefinition in Sources */,
+				574F5EFD252011FF00ABF7D3 /* Hands.swift in Sources */,
+				574F5ECD252011C000ABF7D3 /* SwiftMaster_Widget.swift in Sources */,
+				574F5EEF252011F900ABF7D3 /* SimpleClockFace.swift in Sources */,
+				574F5EE8252011F600ABF7D3 /* TimeProvider.swift in Sources */,
+				574F5EF6252011FC00ABF7D3 /* SwiftMasterClockFace.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5758E383251F656C007FB87C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -497,6 +611,7 @@
 				578B2909251E94A400496887 /* SimpleClockFace.swift in Sources */,
 				578B28FC251E7B8500496887 /* Hands.swift in Sources */,
 				578B8F7A251E18DC0017A84C /* SwiftMasterApp.swift in Sources */,
+				574F5ED3252011C100ABF7D3 /* SwiftMaster_Widget.intentdefinition in Sources */,
 				578B2904251E944600496887 /* TimeProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -520,6 +635,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		574F5ED5252011C100ABF7D3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 574F5EC4252011C000ABF7D3 /* SwiftMaster-WidgetExtension */;
+			targetProxy = 574F5ED4252011C100ABF7D3 /* PBXContainerItemProxy */;
+		};
 		5758E38A251F656C007FB87C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 5758E386251F656C007FB87C /* SwiftMaster-AW Extension */;
@@ -543,6 +663,50 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		574F5ED8252011C100ABF7D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3C42F7N9CQ;
+				INFOPLIST_FILE = "SwiftMaster-Widget/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "co.jossy.SwiftMaster.SwiftMaster-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		574F5ED9252011C100ABF7D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3C42F7N9CQ;
+				INFOPLIST_FILE = "SwiftMaster-Widget/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "co.jossy.SwiftMaster.SwiftMaster-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		5758E39C251F656D007FB87C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -750,6 +914,7 @@
 		578B8F9C251E18DD0017A84C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -772,6 +937,7 @@
 		578B8F9D251E18DD0017A84C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -878,6 +1044,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		574F5EDA252011C100ABF7D3 /* Build configuration list for PBXNativeTarget "SwiftMaster-WidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				574F5ED8252011C100ABF7D3 /* Debug */,
+				574F5ED9252011C100ABF7D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		5758E39B251F656D007FB87C /* Build configuration list for PBXNativeTarget "SwiftMaster-AW Extension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
