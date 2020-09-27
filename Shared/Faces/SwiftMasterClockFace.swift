@@ -79,7 +79,7 @@ struct SwiftMasterClockFace: View {
   var face: some View {
     ZStack{
       GeometryReader { reader in
-        
+        //Cerachrom()
         Circle().stroke(style:StrokeStyle(lineWidth: 2)).foregroundColor(Color.red)
         
         renderDate(reader, color: .red)

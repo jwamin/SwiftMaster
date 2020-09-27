@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		574F5F1025202E2D00ABF7D3 /* Cerachrom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574F5F0F25202E2D00ABF7D3 /* Cerachrom.swift */; };
+		574F5F1125202E2D00ABF7D3 /* Cerachrom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574F5F0F25202E2D00ABF7D3 /* Cerachrom.swift */; };
 		5758E381251F656C007FB87C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5758E380251F656C007FB87C /* Assets.xcassets */; };
 		5758E388251F656C007FB87C /* SwiftMaster-AW Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5758E387251F656C007FB87C /* SwiftMaster-AW Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		5758E38F251F656D007FB87C /* SwiftMasterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5758E38E251F656D007FB87C /* SwiftMasterApp.swift */; };
@@ -88,6 +90,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		574F5F0F25202E2D00ABF7D3 /* Cerachrom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cerachrom.swift; sourceTree = "<group>"; };
 		5758E37E251F656B007FB87C /* SwiftMaster-AW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftMaster-AW.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5758E380251F656C007FB87C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5758E382251F656C007FB87C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -212,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				578B28FB251E7B8500496887 /* Hands.swift */,
+				574F5F0F25202E2D00ABF7D3 /* Cerachrom.swift */,
 			);
 			path = Geometry;
 			sourceTree = "<group>";
@@ -484,6 +488,7 @@
 				5758E391251F656D007FB87C /* ComplicationController.swift in Sources */,
 				5758E3AE251F6597007FB87C /* SimpleClockFace.swift in Sources */,
 				5758E3AD251F6594007FB87C /* TimeProvider.swift in Sources */,
+				574F5F1125202E2D00ABF7D3 /* Cerachrom.swift in Sources */,
 				5758E3AF251F659A007FB87C /* SwiftMasterClockFace.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -492,6 +497,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				574F5F1025202E2D00ABF7D3 /* Cerachrom.swift in Sources */,
 				578B2911251E94E300496887 /* Time.swift in Sources */,
 				578B8F7C251E18DC0017A84C /* SwiftMasterClockFace.swift in Sources */,
 				578B2909251E94A400496887 /* SimpleClockFace.swift in Sources */,
