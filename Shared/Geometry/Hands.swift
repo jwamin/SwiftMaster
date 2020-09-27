@@ -177,13 +177,17 @@ struct SecondsHand: View {
         Rectangle().fill().foregroundColor(.red).frame(width: reader.size.width / handWidth, height: reader.size.height / tipHeight, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/).position(x: reader.size.width/2, y: reader.size.height / tipHeight / 2)
         
         //circle
-        Circle().fill().foregroundColor(.gray).frame(width: reader.size.width / 2, height: reader.size.width / 2, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/).overlay(Circle().fill().foregroundColor(.white).scaleEffect(0.8)).position(x: reader.size.width/2, y: reader.size.height / 3)
+        makeCircle(reader: reader).position(x: reader.size.width/2, y: reader.size.height / 3)
       }
     }
     
     
   }
   
+}
+
+func makeCircle(reader: GeometryProxy, size: CGFloat = 2) -> some View {
+  Circle().fill().foregroundColor(.gray).frame(width: reader.size.width / size, height: reader.size.width / size, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/).overlay(Circle().fill().foregroundColor(.white).scaleEffect(0.8))
 }
 
 

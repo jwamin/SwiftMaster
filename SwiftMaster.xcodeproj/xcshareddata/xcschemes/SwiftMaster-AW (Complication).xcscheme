@@ -55,10 +55,8 @@
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES"
       launchAutomaticallySubstyle = "32">
-      <RemoteRunnable
-         runnableDebuggingMode = "2"
-         BundleIdentifier = "com.apple.Carousel"
-         RemotePath = "/SwiftMaster">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5758E37D251F656B007FB87C"
@@ -66,7 +64,7 @@
             BlueprintName = "SwiftMaster-AW"
             ReferencedContainer = "container:SwiftMaster.xcodeproj">
          </BuildableReference>
-      </RemoteRunnable>
+      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -75,10 +73,8 @@
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES"
       launchAutomaticallySubstyle = "32">
-      <RemoteRunnable
-         runnableDebuggingMode = "2"
-         BundleIdentifier = "com.apple.Carousel"
-         RemotePath = "/SwiftMaster">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5758E37D251F656B007FB87C"
@@ -86,16 +82,7 @@
             BlueprintName = "SwiftMaster-AW"
             ReferencedContainer = "container:SwiftMaster.xcodeproj">
          </BuildableReference>
-      </RemoteRunnable>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5758E37D251F656B007FB87C"
-            BuildableName = "SwiftMaster-AW.app"
-            BlueprintName = "SwiftMaster-AW"
-            ReferencedContainer = "container:SwiftMaster.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
