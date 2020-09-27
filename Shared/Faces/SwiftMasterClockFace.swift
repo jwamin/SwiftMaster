@@ -79,11 +79,12 @@ struct SwiftMasterClockFace: View {
   var face: some View {
     ZStack{
       GeometryReader { reader in
-        //Cerachrom()
-        DiverFace().frame(width: reader.size.width, height: reader.size.height, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+        Cerachrom().frame(width: reader.size.width, height: reader.size.height, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+        DiverFace().frame(width: reader.size.width, height: reader.size.height, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/).scaleEffect(0.8)
         //Circle().stroke(style:StrokeStyle(lineWidth: 2)).foregroundColor(Color.red)
         
         renderDate(reader, color: .red)
+        ZStack {
         if show24Hour {
           create24HourHand(reader, angle: time.hourAngle24).transition(AnyTransition.opacity.combined(with: .scale))
         }
@@ -94,7 +95,7 @@ struct SwiftMasterClockFace: View {
         
         //createHand(reader, width: 2, angle:time.secondHandAngle(),color:.red)
         createSecondHand(reader, angle: time.secondHandAngle())
-        
+        }.scaleEffect(0.75)
         //notches
         
       }

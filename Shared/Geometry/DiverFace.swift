@@ -12,7 +12,7 @@ struct DiverFace: View {
   let one = 360 / 12
   let thickness:CGFloat = 2
   
-  func getDecoration(reader: GeometryProxy, index:Int) -> some View {
+  func getDecoration(reader: GeometryProxy, index:Int) -> AnyView {
     switch index {
     case 1,2,4,5,7,8,10,11:
       return AnyView(makeCircle(reader: reader, size: 10)
@@ -23,7 +23,7 @@ struct DiverFace: View {
                       .rotationEffect(.degrees(Double(one * index)))
                       .position(x: reader.size.width/2, y: reader.size.height/2).position(x: reader.size.width/2, y: reader.size.height/2))
     case 6:
-      return AnyView(Rectangle().fill().border(Color.gray, width: thickness).foregroundColor(.white)).frame(width: reader.size.width / 9 / 3,height: reader.size.width / 24, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/).position(x: reader.size.width/2, y: reader.size.height/2).transformEffect(.init(translationX: 0, y: -reader.size.width/2.5)).rotationEffect(.degrees(Double(one * index)))
+      return AnyView(Rectangle().fill().border(Color.gray, width: thickness).foregroundColor(.white).frame(width: reader.size.width / 9 / 3,height: reader.size.width / 24, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/).position(x: reader.size.width/2, y: reader.size.height/2).transformEffect(.init(translationX: 0, y: -reader.size.width/2.5)).rotationEffect(.degrees(Double(one * index))))
     case 12:
       return AnyView(HStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: reader.size.width/50, content: {
           ForEach(0..<2){ num in
