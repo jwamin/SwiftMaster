@@ -8,10 +8,10 @@
 import SwiftUI
 
 let colaStops:[Gradient.Stop] = [
-  .init(color: .red, location: 0),
-  .init(color:.red, location: 0.4),
-  .init(color: .blue, location: 0.6),
-  .init(color:.blue, location: 1)
+  .init(color: .blue, location: 0),
+  .init(color:.blue, location: 0.4),
+  .init(color: .red, location: 0.6),
+  .init(color:.red, location: 1)
 ]
 
 let manBatStops:[Gradient.Stop] = [

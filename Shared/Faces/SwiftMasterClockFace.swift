@@ -11,6 +11,13 @@ import Combine
 struct SwiftMasterClockFace: View {
   
   @State var show24Hour = false
+  @State var rotationAngleProvider = 0.0
+  
+  var rotationAngle: Angle {
+    print(rotationAngleProvider)
+    let one:Double = 360 / 24
+    return .degrees(one * rotationAngleProvider)
+  }
   
   var time: Time {
     timeProvider.publishedTime
@@ -79,11 +86,9 @@ struct SwiftMasterClockFace: View {
   var face: some View {
     ZStack{
       GeometryReader { reader in
-        Cerachrom().frame(width: reader.size.width, height: reader.size.height, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-        DiverFace().frame(width: reader.size.width, height: reader.size.height, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/).scaleEffect(0.8)
-        //Circle().stroke(style:StrokeStyle(lineWidth: 2)).foregroundColor(Color.red)
-        
-        renderDate(reader, color: .red)
+        Cerachrom().rotationEffect(rotationAngle).frame(width: reader.size.width, height: reader.size.height, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+        DiverFace(date: time.dayOfMonth).frame(width: reader.size.width, height: reader.size.height, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/).scaleEffect(0.8)
+       
         ZStack {
         if show24Hour {
           create24HourHand(reader, angle: time.hourAngle24).transition(AnyTransition.opacity.combined(with: .scale))
@@ -108,6 +113,8 @@ struct SwiftMasterClockFace: View {
     #if os(watchOS)
     face
       .padding(1)
+      .focusable(true)
+      .digitalCrownRotation($rotationAngleProvider,from:0,through:24, by: 1, sensitivity: .low, isContinuous: true, isHapticFeedbackEnabled: true)
       .drawingGroup()
     #else
     face
