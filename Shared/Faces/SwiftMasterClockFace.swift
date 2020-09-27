@@ -19,6 +19,8 @@ struct SwiftMasterClockFace: View {
     return .degrees(one * rotationAngleProvider)
   }
   
+  let transition: AnyTransition = .asymmetric(insertion: AnyTransition.opacity.combined(with: .scale), removal: .opacity) 
+  
   var time: Time {
     timeProvider.publishedTime
   }
@@ -86,23 +88,23 @@ struct SwiftMasterClockFace: View {
   var face: some View {
     ZStack{
       GeometryReader { reader in
-        Cerachrom().rotationEffect(rotationAngle).frame(width: reader.size.width, height: reader.size.height, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-        DiverFace(date: time.dayOfMonth).frame(width: reader.size.width, height: reader.size.height, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/).scaleEffect(0.8)
+        if show24Hour {
+          Cerachrom().rotationEffect(rotationAngle).frame(width: reader.size.width, height: reader.size.height, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/).transition(transition)
+        }
+        DiverFace(date: time.dayOfMonth).frame(width: reader.size.width, height: reader.size.height, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/).scaleEffect(show24Hour ? 0.8 : 1)
        
         ZStack {
         if show24Hour {
-          create24HourHand(reader, angle: time.hourAngle24).transition(AnyTransition.opacity.combined(with: .scale))
+          create24HourHand(reader, angle: time.hourAngle24).transition(transition)
         }
         
         createHourHand(reader, angle: time.hourAngle)
 
         createMinuteHand(reader, width: reader.size.width/7.5, angle: time.minuteHandAngle())
         
-        //createHand(reader, width: 2, angle:time.secondHandAngle(),color:.red)
         createSecondHand(reader, angle: time.secondHandAngle())
-        }.scaleEffect(0.75)
-        //notches
-        
+        }.scaleEffect(show24Hour ? 0.75 : 1)
+
       }
     }.aspectRatio(1, contentMode: .fit)
 
