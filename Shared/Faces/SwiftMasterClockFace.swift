@@ -11,6 +11,9 @@ import Combine
 struct SwiftMasterClockFace: View {
   
   @State var show24Hour = false
+  
+  #if os(watchOS)
+  
   @State var rotationAngleProvider = 0.0
   
   var rotationAngle: Angle {
@@ -18,6 +21,10 @@ struct SwiftMasterClockFace: View {
     let one:Double = 360 / 24
     return .degrees(one * rotationAngleProvider)
   }
+  
+  #else
+  @State var rotationAngle: Angle = .init(degrees: 0)
+  #endif
   
   let transition: AnyTransition = .asymmetric(insertion: AnyTransition.opacity.combined(with: .scale), removal: .opacity) 
   
@@ -92,37 +99,50 @@ struct SwiftMasterClockFace: View {
           Cerachrom().rotationEffect(rotationAngle).frame(width: reader.size.width, height: reader.size.height, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/).transition(transition)
         }
         DiverFace(date: time.dayOfMonth).frame(width: reader.size.width, height: reader.size.height, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/).scaleEffect(show24Hour ? 0.8 : 1)
-       
+        
         ZStack {
-        if show24Hour {
-          create24HourHand(reader, angle: time.hourAngle24).transition(transition)
-        }
-        
-        createHourHand(reader, angle: time.hourAngle)
-
-        createMinuteHand(reader, width: reader.size.width/7.5, angle: time.minuteHandAngle())
-        
-        createSecondHand(reader, angle: time.secondHandAngle())
+          if show24Hour {
+            create24HourHand(reader, angle: time.hourAngle24).transition(transition)
+          }
+          
+          createHourHand(reader, angle: time.hourAngle)
+          
+          createMinuteHand(reader, width: reader.size.width/7.5, angle: time.minuteHandAngle())
+          
+          createSecondHand(reader, angle: time.secondHandAngle())
         }.scaleEffect(show24Hour ? 0.75 : 1)
-
+        
       }
     }.aspectRatio(1, contentMode: .fit)
-
+    
   }
   
   var body: some View {
     VStack {
-    #if os(watchOS)
-    face
-      .padding(1)
-      .focusable(true)
-      .digitalCrownRotation($rotationAngleProvider,from:0,through:24, by: 1, sensitivity: .low, isContinuous: true, isHapticFeedbackEnabled: true)
-      .drawingGroup()
-    #else
-    face
-      .padding()
-      .drawingGroup()
-    #endif
+      #if os(watchOS)
+      face
+        .padding(1)
+        .focusable(true)
+        .digitalCrownRotation($rotationAngleProvider,from:0,through:24, by: 1, sensitivity: .low, isContinuous: true, isHapticFeedbackEnabled: true)
+        .drawingGroup()
+      #else
+      face
+        .gesture(
+          RotationGesture()
+            .onChanged({ (angle) in
+              self.rotationAngle = angle
+            })
+            .onEnded({ (angle) in
+              let one:Double = 360 / 24
+              let degrees = round(angle.degrees / one) * one
+              withAnimation(.easeInOut) {
+                self.rotationAngle = .degrees(degrees)
+              }
+            })
+        )
+        .padding()
+        .drawingGroup()
+      #endif
     }.onTapGesture {
       withAnimation(.spring()){
         show24Hour.toggle()

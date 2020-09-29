@@ -76,5 +76,6 @@ struct DiverFace: View {
 struct DiverFace_Previews: PreviewProvider {
   static var previews: some View {
     DiverFace(date:26).previewLayout(.sizeThatFits)
+    DiverFace(date:26).previewLayout(.sizeThatFits)
   }
 }
