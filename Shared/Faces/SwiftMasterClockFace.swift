@@ -23,6 +23,7 @@ struct SwiftMasterClockFace: View {
   }
   
   #else
+  @State var startRotation:Angle?
   @State var rotationAngle: Angle = .init(degrees: 0)
   #endif
   
@@ -130,13 +131,23 @@ struct SwiftMasterClockFace: View {
         .gesture(
           RotationGesture()
             .onChanged({ (angle) in
-              self.rotationAngle = angle
+              var angleTo = angle
+              if let isRotating = self.startRotation {
+                angleTo = angleTo + isRotating
+                self.rotationAngle = angleTo
+              } else {
+                self.startRotation = self.rotationAngle
+                print("starting rotation, will skip first iteration")
+              }
             })
             .onEnded({ (angle) in
-              let one:Double = 360 / 24
-              let degrees = round(angle.degrees / one) * one
-              withAnimation(.easeInOut) {
-                self.rotationAngle = .degrees(degrees)
+              if let isRotating = self.startRotation {
+                let one:Double = 360 / 24
+                let degrees = round((angle.degrees + isRotating.degrees) / one) * one
+                self.startRotation = nil
+                withAnimation(.easeInOut) {
+                  self.rotationAngle = .degrees(degrees)
+                }
               }
             })
         )
