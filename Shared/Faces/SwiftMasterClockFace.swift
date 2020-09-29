@@ -10,7 +10,7 @@ import Combine
 
 struct SwiftMasterClockFace: View {
   
-  @State var show24Hour = false
+  @State var show24Hour = true
   
   #if os(watchOS)
   
@@ -122,7 +122,6 @@ struct SwiftMasterClockFace: View {
     VStack {
       #if os(watchOS)
       face
-        .padding(1)
         .focusable(true)
         .digitalCrownRotation($rotationAngleProvider,from:0,through:24, by: 1, sensitivity: .low, isContinuous: true, isHapticFeedbackEnabled: true)
         .drawingGroup()
