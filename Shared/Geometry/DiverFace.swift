@@ -67,7 +67,11 @@ struct DiverFace: View {
           
           
         }
-        renderDate(reader, color: .blue)
+        #if os(watchOS)
+        renderDate(reader, color: colaTop).offset(y: -8)
+        #else
+        renderDate(reader, color: colaTop)
+        #endif
       }
     }
   }

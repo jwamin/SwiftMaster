@@ -20,7 +20,7 @@ struct MinuteHandFill: View {
       ZStack{
         GeometryReader { reader in
           DiverHand(topSegmentOffset: 4,cutoutOffset: 1.2, squareOffset: false)
-          .fill().foregroundColor(.blue)
+          .fill().foregroundColor(colaTop)
           Triangle().fill().frame(width: reader.size.width, height: reader.size.height / 4, alignment: .center).scaleEffect(0.7, anchor: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/).offset(y: reader.size.height/30)
           Rectangle().fill().frame(width: reader.size.width/24, height: reader.size.height/8, alignment: .center).position(x: reader.size.width/2, y: reader.size.height-reader.size.height/16)
           Circle().fill().frame(width: reader.size.width/6, height: reader.size.width/6, alignment: .center).position(x: reader.size.width/2, y: reader.size.height)
@@ -34,7 +34,7 @@ struct HourHandFill: View {
       ZStack{
         GeometryReader { reader in
           DiverHand(topSegmentOffset: 6,cutoutOffset:2.2, squareOffset: true)
-          .fill().foregroundColor(.blue)
+          .fill().foregroundColor(colaTop)
           Circle().fill().frame(width: reader.size.width, height: reader.size.height / 3, alignment: .center).scaleEffect(0.7, anchor: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/).offset(y: reader.size.height/25)
           Rectangle().fill().frame(width: reader.size.width/24, height: reader.size.height/8, alignment: .center).position(x: reader.size.width/2, y: reader.size.height-reader.size.height/16)
           Circle().fill().frame(width: reader.size.width/7, height: reader.size.height/7, alignment: .center).position(x: reader.size.width/2, y: reader.size.height)
