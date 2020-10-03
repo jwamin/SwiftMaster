@@ -99,7 +99,7 @@ struct SwiftMasterClockFace: View {
         if show24Hour {
           Cerachrom().rotationEffect(rotationAngle).frame(width: reader.size.width, height: reader.size.height, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/).transition(transition)
         }
-        DiverFace(date: time.dayOfMonth).frame(width: reader.size.width, height: reader.size.height, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/).scaleEffect(show24Hour ? 0.8 : 1)
+        DiverFace(date: time.dayOfMonth,show24: show24Hour).frame(width: reader.size.width, height: reader.size.height, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/).scaleEffect(show24Hour ? 0.8 : 1)
         
         ZStack {
           if show24Hour {

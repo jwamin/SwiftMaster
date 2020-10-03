@@ -13,6 +13,7 @@ struct DiverFace: View {
   let one = 360 / 12
   let sixty = 360 / 60
   let thickness:CGFloat = 2
+  let show24:Bool
   
   fileprivate func renderDate(_ reader: GeometryProxy, color: Color) -> some View {
     
@@ -31,21 +32,37 @@ struct DiverFace: View {
                       .transformEffect(.init(translationX: 0, y: -reader.size.width/2.5)).rotationEffect(.degrees(Double(one * index))).position(x: reader.size.width/2, y: reader.size.height/2))
     case 3, 9:
       return AnyView(Rectangle().fill().foregroundColor(.gray)
-                                .overlay(Rectangle().fill().scaleEffect(0.8).foregroundColor(.white))
+                                .overlay(Rectangle().fill().scaleEffect(CGSize(width: 0.7, height: 0.9)).foregroundColor(.white))
                       .frame(width: reader.size.width / 20,height: reader.size.width / 9, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/).transformEffect(.init(translationX: 0, y: -reader.size.width/2.5))
                       .rotationEffect(.degrees(Double(one * index)))
                       .position(x: reader.size.width/2, y: reader.size.height/2).position(x: reader.size.width/2, y: reader.size.height/2))
     case 6:
-      return AnyView(     Rectangle().fill().foregroundColor(.gray)
-                            .overlay(Rectangle().fill().scaleEffect(0.8).foregroundColor(.white)).frame(width: reader.size.width / 20,height: reader.size.width / 20, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/).position(x: reader.size.width/2, y: reader.size.height/2).transformEffect(.init(translationX: 0, y: -reader.size.width/2.5)).rotationEffect(.degrees(Double(one * index))))
+      return AnyView(Rectangle().fill().foregroundColor(.gray)
+                            .overlay(Rectangle().fill().scaleEffect(0.7).foregroundColor(.white)).frame(width: reader.size.width / 20,height: reader.size.width / 20, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/).position(x: reader.size.width/2, y: reader.size.height/2).transformEffect(.init(translationX: 0, y: -reader.size.width/2.5)).rotationEffect(.degrees(Double(one * index))))
     case 12:
-      return AnyView(HStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: reader.size.width/50, content: {
-        ForEach(0..<2){ num in
-          Rectangle().fill().foregroundColor(.gray)
-            .overlay(Rectangle().fill().scaleEffect(0.8).foregroundColor(.white))
-            .frame(width: reader.size.width / 20,height: reader.size.width / 9, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-        }
-      }).position(x: reader.size.width/2, y: reader.size.height/2).transformEffect(.init(translationX: 0, y: -reader.size.width/2.5)))
+      
+      if show24 {
+        
+        return AnyView(
+          Triangle().fill()
+            .foregroundColor(.gray)
+            .overlay(Triangle().fill().foregroundColor(.white).scaleEffect(0.6).offset(y: 5))
+            .frame(width: reader.size.width / 13,height: reader.size.width / 9, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+            .position(x: reader.size.width/2, y: reader.size.height/2).rotationEffect(.init(degrees: 180)).transformEffect(.init(translationX: 0, y: -reader.size.width/2.5)))
+        
+      } else {
+        
+        return AnyView(HStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: reader.size.width/50, content: {
+          ForEach(0..<2){ num in
+            Rectangle().fill().foregroundColor(.gray)
+              .overlay(Rectangle().fill().scaleEffect(CGSize(width: 0.7, height: 0.9)).foregroundColor(.white))
+              .frame(width: reader.size.width / 20,height: reader.size.width / 9, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+          }
+        }).position(x: reader.size.width/2, y: reader.size.height/2).transformEffect(.init(translationX: 0, y: -reader.size.width/2.5)))
+        
+      }
+      
+
     default:
       return AnyView(EmptyView())
     }
@@ -79,7 +96,7 @@ struct DiverFace: View {
 
 struct DiverFace_Previews: PreviewProvider {
   static var previews: some View {
-    DiverFace(date:26).previewLayout(.sizeThatFits)
-    DiverFace(date:26).previewLayout(.sizeThatFits)
+    DiverFace(date:26,show24:true).previewLayout(.sizeThatFits)
+    DiverFace(date:26,show24:false).previewLayout(.sizeThatFits)
   }
 }
