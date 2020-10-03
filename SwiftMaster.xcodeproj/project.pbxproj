@@ -31,12 +31,12 @@
 		578B2904251E944600496887 /* TimeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578B2903251E944600496887 /* TimeProvider.swift */; };
 		578B2909251E94A400496887 /* SimpleClockFace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578B2908251E94A400496887 /* SimpleClockFace.swift */; };
 		578B2911251E94E300496887 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578B2910251E94E300496887 /* Time.swift */; };
-		578B8F7A251E18DC0017A84C /* SwiftMasterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578B8F79251E18DC0017A84C /* SwiftMasterApp.swift */; };
-		578B8F7C251E18DC0017A84C /* SwiftMasterClockFace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578B8F7B251E18DC0017A84C /* SwiftMasterClockFace.swift */; };
 		578B8F7E251E18DD0017A84C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 578B8F7D251E18DD0017A84C /* Assets.xcassets */; };
 		578B8F81251E18DD0017A84C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 578B8F80251E18DD0017A84C /* Preview Assets.xcassets */; };
 		578B8F8C251E18DD0017A84C /* SwiftMasterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578B8F8B251E18DD0017A84C /* SwiftMasterTests.swift */; };
 		578B8F97251E18DD0017A84C /* SwiftMasterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578B8F96251E18DD0017A84C /* SwiftMasterUITests.swift */; };
+		579C472A2528EB6200FA39C8 /* SwiftMasterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578B8F79251E18DC0017A84C /* SwiftMasterApp.swift */; };
+		57BE0F2C2528EAFC00264164 /* SwiftMasterClockFace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578B8F7B251E18DC0017A84C /* SwiftMasterClockFace.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -516,12 +516,12 @@
 				574F5F1025202E2D00ABF7D3 /* Cerachrom.swift in Sources */,
 				5724B0B92528E1110055346D /* OutlineShape.swift in Sources */,
 				578B2911251E94E300496887 /* Time.swift in Sources */,
-				578B8F7C251E18DC0017A84C /* SwiftMasterClockFace.swift in Sources */,
 				578B2909251E94A400496887 /* SimpleClockFace.swift in Sources */,
+				579C472A2528EB6200FA39C8 /* SwiftMasterApp.swift in Sources */,
 				574F5F182520369500ABF7D3 /* Face.swift in Sources */,
 				578B28FC251E7B8500496887 /* Hands.swift in Sources */,
-				578B8F7A251E18DC0017A84C /* SwiftMasterApp.swift in Sources */,
 				578B2904251E944600496887 /* TimeProvider.swift in Sources */,
+				57BE0F2C2528EAFC00264164 /* SwiftMasterClockFace.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

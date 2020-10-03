@@ -46,9 +46,9 @@ struct DiverFace: View {
         return AnyView(
           Triangle().fill()
             .foregroundColor(.gray)
-            .overlay(Triangle().fill().foregroundColor(.white).scaleEffect(0.6).offset(y: 5))
-            .frame(width: reader.size.width / 13,height: reader.size.width / 9, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-            .position(x: reader.size.width/2, y: reader.size.height/2).rotationEffect(.init(degrees: 180)).transformEffect(.init(translationX: 0, y: -reader.size.width/2.5)))
+            .overlay(Triangle().fill().foregroundColor(.white).scaleEffect(0.6).offset(y: reader.size.height / 220))
+            .frame(width: reader.size.width / 8,height: reader.size.width / 7, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+            .position(x: reader.size.width/2, y: reader.size.height/2 ).rotationEffect(.init(degrees: 180)).transformEffect(.init(translationX: 0, y: -reader.size.width/2.6)))
         
       } else {
         
@@ -68,13 +68,16 @@ struct DiverFace: View {
     }
   }
   
+  func isLongTooth(_ tooth:Int) -> Bool {
+    tooth % 5 == 0
+  }
   
   var body: some View {
     
     ZStack {
       GeometryReader { reader in
         
-        ForEach(1..<61){ tooth in Rectangle().fill().foregroundColor(.gray).frame(width: 2, height: reader.size.height / ((tooth % 5 == 0) ? 20 : 40), alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/).position(x: reader.size.width/2, y: reader.size.height/2).transformEffect(.init(translationX: 0, y: -reader.size.width/2)).rotationEffect(.degrees(Double(sixty * tooth)))
+        ForEach(1..<61){ tooth in Rectangle().fill().foregroundColor(.gray).frame(width: 2, height: reader.size.height / (isLongTooth(tooth) ? 40 : 80), alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/).position(x: reader.size.width/2, y: reader.size.height/2).transformEffect(.init(translationX: 0, y: -reader.size.width/2)).rotationEffect(.degrees(Double(sixty * tooth)))
           }
         
         
@@ -89,7 +92,7 @@ struct DiverFace: View {
         #else
         renderDate(reader, color: colaTop)
         #endif
-      }
+      }.mask(Circle())
     }
   }
 }

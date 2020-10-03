@@ -30,6 +30,7 @@ struct OutlineShape_Previews: PreviewProvider {
         OutlineShape(shape:Circle()).frame(width: 100, height: 100, alignment: .center)
         OutlineShape(shape:Rectangle()).frame(width: 100, height: 200, alignment: .center)
         OutlineShape(shape:Capsule()).frame(width: 200, height: 100, alignment: .center)
+        //Triangle().inset(10).stroke(Color.blue, style: StrokeStyle(lineWidth: 10)).frame(width: 200, height: 100, alignment: .center).background(Color.gray)
       }
     }
 }
