@@ -2,15 +2,17 @@
 
 #  SwiftMaster
 
-##  Classic Watchface in Swift
+##  Custom watchface in Swift
 
 ### Features
 
 * Skeleton Hands
-* Tap activated, 24Hour hand with GMT Cerachrom on Apple Watch
+* Tap to toggle between faces
+* GMT face with 24Hour hand with Bezel
 * Classic "Diver" face
 * Day of Month Complication
-* "Authentic" ticking animation
+* "Authentic" methanical ticking animation (4 beats a second)
+* watchOS and iOS
 
 ### Instructions
 
