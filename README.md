@@ -8,7 +8,8 @@
 
 * Skeleton Hands
 * Tap to toggle between faces
-* GMT face with 24Hour hand with Bezel
+* GMT face with 24Hour hand with rotating Bezel
+    * Crown on watchOS, rotate gesture on iOS. Sticky hours. 
 * Classic "Diver" face
 * Day of Month Complication
 * "Authentic" methanical ticking animation (4 beats a second)
