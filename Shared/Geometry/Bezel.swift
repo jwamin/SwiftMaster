@@ -1,5 +1,5 @@
 //
-//  Cerachrom.swift
+//  Bezel.swift
 //  SwiftMaster
 //
 //  Created by Joss Manger on 9/26/20.
@@ -28,7 +28,7 @@ let cola = LinearGradient(gradient: Gradient(stops: colaStops), startPoint: .top
 
 let manBat = LinearGradient(gradient: Gradient(stops: manBatStops), startPoint: .top, endPoint: .bottom)
 
-struct Cerachrom: View {
+struct Bezel: View {
 
   var font: Font {
     #if os(watchOS)
@@ -50,9 +50,9 @@ struct Cerachrom: View {
           Circle().inset(by: reader.size.height / 10 / 2).stroke(style: StrokeStyle(lineWidth: reader.size.height / 10)).fill(cola)
         ForEach(1..<25){ num in
           if num % 2 == 0 && num < 24 {
-            Text("\(num)").font(font).foregroundColor(.white).bold().modifier(CerachromTextModifier(reader:reader,transformIteration:num))
+            Text("\(num)").font(font).foregroundColor(.white).bold().modifier(BezelTextModifier(reader:reader,transformIteration:num))
           } else if num % 2 != 0 {
-            Text(".").font(font).foregroundColor(.white).bold().modifier(CerachromTextModifier(reader:reader,transformIteration:num))
+            Text(".").font(font).foregroundColor(.white).bold().modifier(BezelTextModifier(reader:reader,transformIteration:num))
         } else if num == 24 {
           Triangle().fill().frame(width: reader.size.width/10, height: reader.size.height/15, alignment: .center).position(x: reader.size.width/2, y: reader.size.height/2).rotationEffect(.degrees(180)).transformEffect(.init(translationX: 0, y: -reader.size.height/2.23)).foregroundColor(.white).rotationEffect(.degrees(Double(one * num)))
           }
@@ -62,13 +62,13 @@ struct Cerachrom: View {
     }
 }
 
-struct Cerachrom_Previews: PreviewProvider {
+struct Bezel_Previews: PreviewProvider {
     static var previews: some View {
-      Cerachrom().frame(width: 250, height: 250, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/).previewLayout(.sizeThatFits)
+      Bezel().frame(width: 250, height: 250, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/).previewLayout(.sizeThatFits)
     }
 }
 
-struct CerachromTextModifier: ViewModifier {
+struct BezelTextModifier: ViewModifier {
   
   let reader:GeometryProxy
   let transformIteration:Int
